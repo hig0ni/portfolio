@@ -2,13 +2,15 @@ import Image from "next/image";
 
 export default function ProjectItem({data}){
     const title = data.properties.Name.title[0].plain_text
-    const github = data.properties.Github.url
+    const github = data.properties?.Github.url
+    const output = data.properties?.Output.url
     const notion = data.properties.Notion.url
     const description = data.properties.Description.rich_text[0].plain_text
     const imgSrc = data.cover.file?.url || data.cover.external.url
     const stacks = data.properties.Stack.multi_select
     const start = data.properties.WorkPeriod.date.start
     const end = data.properties.WorkPeriod.date.end
+    console.log(github)
 
     const calculatedPeriod = (start, end) => {
         const startDateStringArray = start.split('-');
@@ -39,7 +41,18 @@ export default function ProjectItem({data}){
             <div className="p-4 flex flex-col">
                 <h1 className="text-2xl font-bold">{title}</h1>
                 <h3 className="mt-4 text-xl">{description}</h3>
-                <a href={github}>깃허브 바로가기</a>
+
+                {github && (
+                    <a href={github}>
+                        깃허브 바로가기
+                    </a>
+                )}
+                {output && (
+                    <a href={output}>
+                        결과물 바로가기
+                    </a>
+                )}
+
                 <a href={notion}>노션 바로가기</a>
                 <p className="my-1 ">
                     작업기간 : {start} ~ {end} ({calculatedPeriod(start, end)}일)
