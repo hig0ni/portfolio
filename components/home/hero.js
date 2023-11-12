@@ -15,19 +15,12 @@ export default function Hero() {
                 <br className="inline-block"/>
                 김건희입니다.
                 </h1>
-                {/* <p className="mb-8 leading-relaxed">내용추가</p> */}
                 <div className="flex justify-center">
-                <Link href="/projects">
-                    <a className="btn-project">
-                        프로젝트 보러가기
-                    </a>
-                </Link>
-                <Link href="https://velog.io/@hig0ni">
-                    <a className="btn-project">
-                        블로그 보러가기
-                    </a>
-                </Link>
-            </div>
+                    <Link href="/projects" className="btn-project">프로젝트 보러가기</Link>
+                </div>
+                <div className="flex justify-center">
+                    <Link href="https://velog.io/@hig0ni" className="btn-project">블로그 보러가기</Link>
+                </div>
             </div>
         </>
     )
