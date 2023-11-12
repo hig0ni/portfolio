@@ -19,14 +19,21 @@ export default function Hero() {
                 <div className="flex justify-center">
                     <Link href="/projects">
                         <a className="btn-project">
-                            프로젝트 보러가기
+                            프로젝트 바로가기
+                        </a>
+                    </Link>
+                </div>
+                <div className="flex justify-center">
+                    <Link href="https://github.com/hig0ni">
+                        <a className="btn-project">
+                            깃허브 바로가기
                         </a>
                     </Link>
                 </div>
                 <div className="flex justify-center">
                     <Link href="https://velog.io/@hig0ni">
                         <a className="btn-project">
-                            블로그 보러가기
+                            블로그 바로가기
                         </a>
                     </Link>
                 </div>
