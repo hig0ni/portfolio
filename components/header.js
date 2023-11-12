@@ -27,10 +27,6 @@ export default function Header(){
                             <a className="mr-5 hover:text-gray-900">프로젝트</a>
                         </Link>
 
-                        <Link href="/profile">
-                            <a className="mr-5 hover:text-gray-900">이력서 보기</a>
-                        </Link>
-
                     </nav>
 
                     <DarkModeToggleButton/>

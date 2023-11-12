@@ -22,6 +22,11 @@ export default function Hero() {
                         프로젝트 보러가기
                     </a>
                 </Link>
+                <Link href="https://velog.io/@hig0ni">
+                    <a className="btn-project">
+                        블로그 보러가기
+                    </a>
+                </Link>
             </div>
             </div>
         </>
